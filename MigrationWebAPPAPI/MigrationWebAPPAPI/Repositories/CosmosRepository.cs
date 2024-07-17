@@ -73,7 +73,7 @@ namespace MigrationWebAPPAPI.Repositories
 
         public async  Task<IEnumerable<string>> FetchAllCycleDataAsync(int CycleId, string rdids)
         {
-            var multiCycleStreaming = await _Sqlrepo.FetchAllSQLBatchDataAsyn(_Sqlrepo._connectionString,  CycleId,rdids);
+            var multiCycleStreaming = await _Sqlrepo.FetchAllSQLMultiCycleDataAsync(_Sqlrepo._connectionString,  CycleId);
             return multiCycleStreaming;
         }
     }
